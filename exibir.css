@@ -184,7 +184,7 @@ footer {
 /* Responsive Adjustments */
 @media screen and (max-width: 1378px) {
     .skin-tone-container {
-        transform: translate(-10%, -20px);
+        transform: translate(-0%, -20px);
     }
      .enviar{
          transform: translate(0, -10px);
