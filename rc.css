@@ -133,12 +133,17 @@ footer {
         padding: 10px 0; /* Adiciona espaço entre os itens do menu */
     }
 
-    table {
-        width: 90%; /* Aumenta a largura da tabela em telas menores */
-    }
-
     h2 {
         font-size: 1.5rem; /* Ajusta o tamanho do título em telas menores */
+    }
+
+    table {
+        width: 100%; /* Aumenta a largura da tabela em telas menores */
+        margin: 10px 0; /* Ajusta a margem da tabela */
+    }
+
+    img {
+        max-width: 80px; /* Diminui o tamanho máximo das imagens em telas pequenas */
     }
 
     .footer-content p {
@@ -146,13 +151,19 @@ footer {
     }
 }
 
-@media screen and (max-width: 418px) {
+@media screen and (max-width: 480px) {
     .site-name {
         font-size: 20px; /* Diminui o tamanho do texto do nome do site em telas muito pequenas */
     }
 
     table {
         width: 100%; /* Faz a tabela ocupar toda a largura em telas muito pequenas */
+        margin: 10px 0; /* Ajusta a margem da tabela */
+    }
+
+    footer {
+        padding: 10px; /* Ajusta o padding do rodapé em telas muito pequenas */
     }
 }
+
 
