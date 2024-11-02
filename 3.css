@@ -15,17 +15,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px; /* Diminuído para aproximar os elementos */
     background-color: #346038;
     box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
     width: 100%;
-    flex-wrap: wrap; /* Para ajustar os itens no header em telas menores */
+    flex-wrap: wrap;
 }
 
 .menu {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap; /* Permite que o menu ajuste em uma coluna em telas menores */
+    gap: 8px; /* Diminuído para aproximar os itens do menu */
+    flex-wrap: wrap;
 }
 
 .menu-item {
@@ -41,14 +41,14 @@ header {
 
 .name {
     display: flex;
-    gap: 10px;
+    gap: 5px; /* Diminuído para aproximar os itens do nome */
 }
 
 .site-name {
     text-decoration: none;
     color: #cab47c;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     transition: color 0.3s;
 }
 
@@ -63,7 +63,7 @@ header {
     text-align: center;
     max-width: 400px;
     width: 90%;
-    margin: 20px auto;
+    margin: 10px auto; /* Diminuído para aproximar os elementos */
 }
 
 .picture {
@@ -75,7 +75,7 @@ header {
     border-radius: 20px;
     color: #333;
     cursor: pointer;
-    padding: 20px;
+    padding: 15px; /* Diminuído para aproximar os conteúdos internos */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -91,18 +91,19 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 10px; /* Diminuído para aproximar o botão do conteúdo acima */
 }
 
 .envio-btn {
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Diminuído para reduzir o tamanho do botão */
     background-color: #346038;
     color: #cab47c;
     border-radius: 20px;
     transition: background-color 0.3s;
     display: inline-flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Diminuído para aproximar o botão do rodapé */
     font-size: 1rem;
 }
 
@@ -113,7 +114,7 @@ header {
 footer {
     background-color: #346038;
     color: #cab47c;
-    padding: 20px;
+    padding: 15px; /* Diminuído para aproximar o texto do rodapé */
     text-align: center;
     position: relative;
     width: 100%;
@@ -124,7 +125,7 @@ footer {
 }
 
 .tutorial {
-    padding: 20px;
+    padding: 15px; /* Diminuído para aproximar o conteúdo interno */
     min-height: 100vh;
 }
 
@@ -132,7 +133,7 @@ footer {
 .tutorial h3 {
     color: #181B18;
     text-align: left;
-    padding: 10px;
+    padding: 5px; /* Diminuído para aproximar os títulos */
     margin-bottom: 5px;
     font-family: Roboto, sans-serif;
     margin-left: 1rem;
@@ -152,8 +153,8 @@ footer {
     width: 90%;
     max-width: 500px;
     height: auto;
-    padding: 30px;
-    margin: 20px auto;
+    padding: 20px; /* Diminuído para aproximar o conteúdo interno */
+    margin: 15px auto; /* Diminuído para aproximar a box dos outros elementos */
 }
 
 @media (max-width: 768px) {
@@ -180,7 +181,7 @@ footer {
 
     .envio-btn {
         font-size: 0.9rem;
-        padding: 8px 16px;
+        padding: 6px 12px;
     }
 
     .tutorial h2,
@@ -201,13 +202,14 @@ footer {
 
     .envio-btn {
         font-size: 0.8rem;
-        padding: 6px 12px;
+        padding: 5px 10px;
     }
 
     .box-tutorial {
-        padding: 20px;
+        padding: 15px;
         width: 95%;
     }
 }
+
 
 
