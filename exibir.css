@@ -184,7 +184,7 @@ footer {
 /* Responsive Adjustments */
 @media screen and (max-width: 1378px) {
     .skin-tone-container {
-        transform: translate(-10%, -70px);
+        transform: translate(-10%, -30px);
     }
 
     .Passo h2 {
