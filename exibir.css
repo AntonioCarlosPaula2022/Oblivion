@@ -1,21 +1,26 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html, body {
     height: 100%;
-    margin: 0;
     display: flex;
     flex-direction: column;
 }
 
-
 body {
-    height: 100%;
-    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #cab47c;
     color: #333;
     overflow-x: hidden;
+    margin: 0;
+    min-height: 100vh;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -23,15 +28,15 @@ header {
     padding: 20px;
     background-color: #346038;
     box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
-    width: 100%; 
-    position: relative; 
-    left: 0; 
+    width: 100%;
+    position: relative;
 }
 
+/* Menu */
 .menu {
     display: flex;
-    gap: 0px;
-    margin-left: 1000px;
+    gap: 8px;
+    margin-left: auto;
 }
 
 .menu-item {
@@ -39,119 +44,109 @@ header {
     color: #cab47c;
     font-weight: bold;
     transition: color 0.3s;
-    margin-right: 100px;
+    margin-right: 20px;
 }
 
 .menu-item:hover {
-    color: #346038;
-}
-
-.name {
-    display: flex;
+    color: #28502f;
 }
 
 .site-name {
     text-decoration: none;
     color: #cab47c;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.5rem;
     transition: color 0.3s;
 }
-.site-name:hover{
-    color: #346038;
+
+.site-name:hover {
+    color: #28502f;
 }
-.passos h1{
-    font-family: Roboto;
+
+/* Passos */
+.passos h1, .Passo h2 {
+    font-family: Roboto, sans-serif;
     color: #181B18;
-    margin-left: 50px;
     margin-top: 40px;
-    font-size: 1.5rem;
+    text-align: center;
 }
-.Passo h2{
-    font-family: Roboto;
-    color: #181B18;
-    margin-left: 400px;
+
+.Passo h2 {
     margin-top: 100px;
-    font-size: 1.5rem;
-    
 }
+
+/* Uploaded Image */
 #uploaded-image {
     width: 200px;
-    height: auto;
     max-width: 100%;
-    transform: translate(340px, 100px);
-    
+    margin: 20px auto;
+    display: block;
 }
 
-#display-image  {
+#display-image {
     width: 300px;
     height: 300px;
-    object-fit: cover; /* Preenche o contêiner sem distorção */
-    margin-left: 70px;
+    object-fit: cover;
+    margin: 20px auto;
 }
 
-   
+/* Skin Tone Container */
 .skin-tone-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 90px;
     margin-top: 10px;
-    transform: translate(0, -290px);
 }
+
 .skin-tone-table-scroll {
-    height: 300px; 
-    overflow-y: auto; /* rolagem vertical */
-    border: 1px solid #346038; 
-    padding: 1px; 
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #346038;
+    padding: 1px;
 }
 
 .skin-tone-table {
     display: grid;
-    grid-template-columns: repeat(1, 100px); 
-    gap: 0; 
-    border-spacing: 0; 
-    border-collapse: collapse; 
+    grid-template-columns: repeat(1, 100px);
+    gap: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
 }
 
 .skin-tone-row {
     height: 100px;
     cursor: pointer;
     border: 2px solid transparent;
-    margin: 0; 
-    padding: 0; 
     transition: border-color 0.3s;
 }
 
 .skin-tone-row:hover {
-    border-color: #346038; 
+    border-color: #346038;
 }
 
 .skin-tone-row.selected {
-    border-color: #ff0000; /* Cor de seleção */
+    border-color: #ff0000;
 }
 
-/* Define cores dos 12 tons de pele */
-.skin-tone-1 { background-color: #8d5524; } /* Tom 1 */
-.skin-tone-2 { background-color: #c68642; } /* Tom 2 */
-.skin-tone-3 { background-color: #e0ac69; } /* Tom 3 */
-.skin-tone-4 { background-color: #f1c27d; } /* Tom 4 */
-.skin-tone-5 { background-color: #ffdbac; } /* Tom 5 */
-.skin-tone-6 { background-color: #7d4f2e; } /* Tom 6 */
-.skin-tone-7 { background-color: #b87333; } /* Tom 7 */
-.skin-tone-8 { background-color: #d8a068; } /* Tom 8 */
-.skin-tone-9 { background-color: #f3c48b; } /* Tom 9 */
-.skin-tone-10 { background-color: #ffedc2; } /* Tom 10 */
-.skin-tone-11 { background-color: #5a3d2b; } /* Tom 11 */
-.skin-tone-12 { background-color: #a67b5b; } /* Tom 12 */
+/* Define colors for 12 skin tones */
+.skin-tone-1 { background-color: #8d5524; }
+.skin-tone-2 { background-color: #c68642; }
+.skin-tone-3 { background-color: #e0ac69; }
+.skin-tone-4 { background-color: #f1c27d; }
+.skin-tone-5 { background-color: #ffdbac; }
+.skin-tone-6 { background-color: #7d4f2e; }
+.skin-tone-7 { background-color: #b87333; }
+.skin-tone-8 { background-color: #d8a068; }
+.skin-tone-9 { background-color: #f3c48b; }
+.skin-tone-10 { background-color: #ffedc2; }
+.skin-tone-11 { background-color: #5a3d2b; }
+.skin-tone-12 { background-color: #a67b5b; }
 
-
+/* Enviar Button */
 .enviar {
     display: flex;
-    justify-content: center; 
-    width: 100%; 
-    margin-top: 700px;
-    position: absolute;
-
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .envio-btn {
@@ -161,48 +156,47 @@ header {
     color: #cab47c;
     border-radius: 20px;
     transition: background-color 0.3s;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 20px; 
-    width: 90px; 
-    transform: translate( -5%, -90%);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .envio-btn:hover {
-    background-color: #28502f; 
+    background-color: #28502f;
 }
+
+/* Footer */
 footer {
     background-color: #346038;
     color: #cab47c;
     padding: 20px;
     text-align: center;
     width: 100%;
-    margin-top: auto; 
-    flex-shrink: 0; 
+    margin-top: auto;
+    flex-shrink: 0;
 }
 
 .footer-content p {
     font-size: 1rem;
     margin-bottom: 10px;
 }
- @media screen and (max-width: 1378px) {
-    .skin-tone-container {
-        transform: translate(-10%, -220px);
 
+/* Responsive Adjustments */
+@media screen and (max-width: 1378px) {
+    .skin-tone-container {
+        transform: translate(-10%, -50px);
     }
-    .Passo h2{
+
+    .Passo h2 {
         margin-left: 10px;
     }
+
     #uploaded-image, #display-image {
         width: 300px;
-        height: auto;
         max-width: 100%;
-        transform: translate(30px, 60px);
     }
-    .envio-btn {
-        transform: translate( -100%, -250%);
-        }
- }
+}
+
    
  
 
