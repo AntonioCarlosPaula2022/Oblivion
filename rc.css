@@ -146,7 +146,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 418px) {
     .site-name {
         font-size: 20px; /* Diminui o tamanho do texto do nome do site em telas muito pequenas */
     }
