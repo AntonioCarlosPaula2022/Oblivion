@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #cab47c;
@@ -10,7 +11,11 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -19,133 +24,128 @@ header {
     background-color: #346038;
     box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
 }
+
 .menu {
     display: flex;
     gap: 0px;
-    margin-left: 1000px;
+    margin-left: auto; /* Alinha o menu à direita */
 }
+
 .menu-item {
     text-decoration: none;
     color: #cab47c;
     font-weight: bold;
     transition: color 0.3s;
 }
+
 .menu-item:hover {
     color: #346038;
 }
-.name{
+
+.name {
     display: flex;
     gap: 0px;
 }
-.site-name{
+
+.site-name {
     text-decoration: none;
     color: #cab47c;
     font-weight: bold;
     font-size: 25px;
     transition: color 0.3s;
 }
+
 .info-box {
     background-color: #346038;
-    padding: 7 0px;
-    margin: 20px 0;
+    padding: 20px; /* Ajuste do padding */
+    margin: 20px auto; /* Centraliza a caixa */
     text-align: center;
     border-radius: 20px;
-    width: 800px;
-    height: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
+    width: 90%; /* Altera a largura para ser responsiva */
+    max-width: 800px; /* Limita a largura máxima */
 }
+
 .info-box h1 {
-    font-size: 50px;
-    font-weight: 50px;
+    font-size: 2.5rem; /* Ajuste do tamanho */
     color: #cab47c;
-    margin-bottom: 60px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 40px;
-    padding-top: 40px;
-    text-align: center;
+    margin: 20px 0; /* Ajusta a margem */
     font-family: Inria Serif;
 }
-hr{
-    border: 1px solid #cab47c; /* Altere a cor conforme necessário */
-    margin: 40px 0; /* Espaçamento acima e abaixo da linha */
-    width: 50%; /* Altere a porcentagem conforme necessário */
-    margin-left: auto; /* Alinha a linha ao centro */
-    margin-right: auto; /* Alinha a linha ao centro */
-    
+
+hr {
+    border: 1px solid #cab47c;
+    margin: 40px auto; /* Centraliza */
+    width: 50%; /* Altera a largura conforme necessário */
 }
+
 .info-box p {
-    font-size: 20px;
-    font-weight: 10px;
+    font-size: 1.2rem; /* Ajuste do tamanho */
     color: #cab47c;
-    margin-bottom: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding-top: 30px;
+    margin: 10px 20px; /* Ajusta a margem */
     font-family: Rosarivo;
-    padding-top: 20px;
 }
+
 footer {
     background-color: #346038;
     color: #cab47c;
     padding: 20px;
     text-align: center;
-    position: relative;
-    bottom: 0;
-    top: 500px;
+    margin-top: auto; /* Faz o rodapé ir para a parte inferior */
     width: 100%;
 }
+
 .footer-content p {
-    font-size: 24px;
-    margin-bottom: 0;
-}
-.footer-content p {
-    font-size: 16px;
-    margin-bottom: 0;
+    font-size: 1.2rem; /* Ajusta o tamanho do texto */
 }
 
-@media(max-width:768px) {
+/* Media Queries para responsividade */
+@media(max-width: 768px) {
+    header {
+        flex-direction: column; /* Altera a direção do menu em telas menores */
+        align-items: center; /* Centraliza os itens do menu */
+    }
+
     .menu {
-        flex-direction: column; /* Muda a direção do menu em telas menores */
+        flex-direction: column; /* Alinha os itens do menu em coluna */
         align-items: center; /* Centraliza os itens do menu */
         margin-left: 0; /* Remove a margem esquerda */
     }
-    .menu {
-        flex-direction: column; /* Muda a direção do menu em telas menores */
-        align-items: center; /* Centraliza os itens do menu */
-        margin-left: 0; /* Remove a margem esquerda */
-    }
+
     .info-box {
         padding: 15px; /* Menos padding em telas menores */
+        width: 95%; /* Altera a largura da caixa para telas menores */
     }
+
     .info-box h1 {
         font-size: 2rem; /* Tamanho reduzido */
-        margin: 20px 30px; /* Menos margem */
     }
+
     hr {
         width: 80%; /* Aumenta a largura da linha em telas menores */
     }
+
     .info-box p {
         font-size: 1rem; /* Tamanho reduzido */
-        margin: 10px 20px; /* Menos margem */
     }
+
     footer {
         padding: 10px; /* Menos padding em telas menores */
     }
 }
 
-@media(max-width:480px) {
+@media(max-width: 480px) {
     .site-name {
         font-size: 1rem; /* Tamanho ainda menor */
     }
+
     .info-box h1 {
         font-size: 1.5rem; /* Tamanho reduzido */
     }
+
     .info-box p {
         font-size: 0.9rem; /* Tamanho reduzido */
     }
+
     .footer-content p {
         font-size: 0.8rem; /* Tamanho reduzido */
     }
