@@ -1,12 +1,6 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html, body {
     height: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
 }
@@ -16,11 +10,8 @@ body {
     background-color: #cab47c;
     color: #333;
     overflow-x: hidden;
-    margin: 0;
-    min-height: 100vh;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -32,11 +23,10 @@ header {
     position: relative;
 }
 
-/* Menu */
 .menu {
     display: flex;
-    gap: 8px;
-    margin-left: auto;
+    gap: 0px;
+    margin-left: 1000px;
 }
 
 .menu-item {
@@ -44,75 +34,66 @@ header {
     color: #cab47c;
     font-weight: bold;
     transition: color 0.3s;
-    margin-right: 20px;
+    margin-right: 100px;
 }
 
 .menu-item:hover {
-    color: #28502f;
+    color: #346038;
+}
+
+.name {
+    display: flex;
 }
 
 .site-name {
     text-decoration: none;
     color: #cab47c;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 25px;
     transition: color 0.3s;
 }
 
 .site-name:hover {
-    color: #28502f;
+    color: #346038;
 }
 
-/* Passos */
-.passos h1, .Passo h2 {
-    font-family: Roboto, sans-serif;
+.passos h1 {
+    font-family: Roboto;
     color: #181B18;
+    margin-left: 50px;
     margin-top: 40px;
-    text-align: center;
+    font-size: 1.5rem;
 }
 
 .Passo h2 {
+    font-family: Roboto;
+    color: #181B18;
+    margin-left: 400px;
     margin-top: 100px;
+    font-size: 1.5rem;
 }
 
-/* Uploaded Image */
-#uploaded-image {
-    width: 200px;
-    max-width: 100%;
-    margin: 20px auto;
-    display: block;
-}
-
+/* Imagem */
 #display-image {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    margin: 20px auto;
+    margin-right: 10px; /* Ajuste para aproximar a tabela */
 }
 
-/* Skin Tone Container */
+/* Tabela dos tons de pele */
 .skin-tone-container {
     display: flex;
     justify-content: center;
+    margin-bottom: 90px;
     margin-top: 10px;
+    transform: translate(0, -290px);
+    margin-left: -50px; /* Ajuste para deixar a tabela mais próxima da imagem */
 }
 
-.skin-tone-table-scroll {
-    height: 300px;
-    overflow-y: auto;
-    border: 1px solid #346038;
-    padding: 1px;
-}
-
-.skin-tone-table {
-    display: grid;
-    grid-template-columns: repeat(1, 100px);
-    gap: 0;
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-
+/* Estilos para as linhas da tabela */
 .skin-tone-row {
+    width: 100px;
     height: 100px;
     cursor: pointer;
     border: 2px solid transparent;
@@ -127,21 +108,7 @@ header {
     border-color: #ff0000;
 }
 
-/* Define colors for 12 skin tones */
-.skin-tone-1 { background-color: #8d5524; }
-.skin-tone-2 { background-color: #c68642; }
-.skin-tone-3 { background-color: #e0ac69; }
-.skin-tone-4 { background-color: #f1c27d; }
-.skin-tone-5 { background-color: #ffdbac; }
-.skin-tone-6 { background-color: #7d4f2e; }
-.skin-tone-7 { background-color: #b87333; }
-.skin-tone-8 { background-color: #d8a068; }
-.skin-tone-9 { background-color: #f3c48b; }
-.skin-tone-10 { background-color: #ffedc2; }
-.skin-tone-11 { background-color: #5a3d2b; }
-.skin-tone-12 { background-color: #a67b5b; }
-
-/* Enviar Button */
+/* Botão de Envio */
 .enviar {
     display: flex;
     justify-content: center;
@@ -165,7 +132,7 @@ header {
     background-color: #28502f;
 }
 
-/* Footer */
+/* Rodapé */
 footer {
     background-color: #346038;
     color: #cab47c;
@@ -181,10 +148,10 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Responsive Adjustments */
+/* Media Query para ajustar layout em telas menores */
 @media screen and (max-width: 1378px) {
     .skin-tone-container {
-        transform: translate(-10%, -50px);
+        transform: translate(-10%, -220px);
     }
 
     .Passo h2 {
@@ -193,9 +160,16 @@ footer {
 
     #uploaded-image, #display-image {
         width: 300px;
+        height: auto;
         max-width: 100%;
+        transform: translate(30px, 60px);
+    }
+
+    .envio-btn {
+        transform: translate(-100%, -250%);
     }
 }
+
 
    
  
