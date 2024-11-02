@@ -11,6 +11,9 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
 }
 
 header {
@@ -25,7 +28,7 @@ header {
 .menu {
     display: flex;
     gap: 0px;
-    margin-left: 1000px; /* Ajuste no layout de menu para telas maiores */
+    margin-left: auto; /* Alinha o menu à direita */
 }
 
 .menu-item {
@@ -60,6 +63,7 @@ header {
     margin: 20px auto;
     width: 90%;
     max-width: 1000px;
+    flex: 1; /* Faz com que o container cresça para ocupar espaço disponível */
 }
 
 h2 {
@@ -70,7 +74,7 @@ h2 {
 }
 
 table {
-    width: 50%;
+    width: 100%; /* Ajusta para 100% para não sair da tela */
     border-collapse: collapse;
     margin-top: 20px;
     margin: 20px auto;
@@ -99,24 +103,11 @@ img {
 }
 
 footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer {
     background-color: #346038;
     color: #cab47c;
-    padding: 20px;
     text-align: center;
-    position: relative;
-    bottom: 0;
+    padding: 20px;
+    margin-top: auto; /* Faz o rodapé ir para a parte inferior */
     width: 100%;
 }
 
@@ -164,3 +155,4 @@ footer {
         width: 100%; /* Faz a tabela ocupar toda a largura em telas muito pequenas */
     }
 }
+
