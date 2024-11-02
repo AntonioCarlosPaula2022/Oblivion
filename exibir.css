@@ -146,7 +146,7 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
-   transform: translate(0, -600%);
+    transform: translate(0, -600%);
 }
 
 .envio-btn {
@@ -184,9 +184,11 @@ footer {
 /* Responsive Adjustments */
 @media screen and (max-width: 1378px) {
     .skin-tone-container {
-        transform: translate(-10%, -30px);
+        transform: translate(-10%, -20px);
     }
-
+     .enviar{
+         transform: translate(0, 20px);
+     }
     .Passo h2 {
         margin-left: 10px;
     }
