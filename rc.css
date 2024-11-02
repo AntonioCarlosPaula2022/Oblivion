@@ -79,6 +79,7 @@ table {
     margin-top: 20px;
     margin: 20px auto;
     border-radius: 20px;
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
 }
 
 /* Cabeçalho da Tabela */
@@ -138,7 +139,7 @@ footer {
     }
 
     table {
-        width: 100%; /* Aumenta a largura da tabela em telas menores */
+        width: 100%; /* Faz a tabela ocupar toda a largura em telas menores */
         margin: 10px 0; /* Ajusta a margem da tabela */
     }
 
@@ -159,11 +160,13 @@ footer {
     table {
         width: 100%; /* Faz a tabela ocupar toda a largura em telas muito pequenas */
         margin: 10px 0; /* Ajusta a margem da tabela */
+        overflow-x: auto; /* Permite rolagem horizontal se a tabela for muito larga */
     }
 
     footer {
         padding: 10px; /* Ajusta o padding do rodapé em telas muito pequenas */
     }
 }
+
 
 
