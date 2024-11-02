@@ -11,11 +11,12 @@ body {
     overflow-x: hidden;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px; /* Diminuído para aproximar os elementos */
+    padding: 10px 20px; /* Reduzido para aproximar os elementos */
     background-color: #346038;
     box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
     width: 100%;
@@ -24,62 +25,49 @@ header {
 
 .menu {
     display: flex;
-    gap: 8px; /* Diminuído para aproximar os itens do menu */
+    gap: 8px;
     flex-wrap: wrap;
 }
 
-.menu-item {
+.menu-item, .site-name {
     text-decoration: none;
     color: #cab47c;
     font-weight: bold;
     transition: color 0.3s;
-}
-
-.menu-item:hover {
-    color: #346038;
-}
-
-.name {
-    display: flex;
-    gap: 5px; /* Diminuído para aproximar os itens do nome */
 }
 
 .site-name {
-    text-decoration: none;
-    color: #cab47c;
-    font-weight: bold;
-    font-size: 1.4rem;
-    transition: color 0.3s;
+    font-size: 1.2rem;
 }
 
-.site-name:hover {
+.site-name:hover, .menu-item:hover {
     color: #28502f;
 }
 
+/* Upload Section */
 .Upload {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
     max-width: 400px;
-    width: 90%;
-    margin: 10px auto; /* Diminuído para aproximar os elementos */
+    width: 100%;
+    margin: 20px auto; /* Centralizado na página */
 }
 
 .picture {
-    aspect-ratio: 16/9;
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     background: rgba(100, 84, 72, 0.3);
-    display: flex;
     border-radius: 20px;
     color: #333;
     cursor: pointer;
-    padding: 15px; /* Diminuído para aproximar os conteúdos internos */
+    padding: 15px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom: 10px; /* Aproxima o botão do elemento acima */
 }
 
 #uploaded-image {
@@ -87,23 +75,23 @@ header {
     height: auto;
 }
 
+/* Enviar Button */
 .enviar {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 10px; /* Diminuído para aproximar o botão do conteúdo acima */
+    margin-top: 10px;
 }
 
 .envio-btn {
     text-decoration: none;
-    padding: 8px 16px; /* Diminuído para reduzir o tamanho do botão */
+    padding: 8px 16px;
     background-color: #346038;
     color: #cab47c;
     border-radius: 20px;
     transition: background-color 0.3s;
     display: inline-flex;
     justify-content: center;
-    margin-bottom: 15px; /* Diminuído para aproximar o botão do rodapé */
     font-size: 1rem;
 }
 
@@ -111,12 +99,12 @@ header {
     background-color: #28502f;
 }
 
+/* Footer */
 footer {
     background-color: #346038;
     color: #cab47c;
-    padding: 15px; /* Diminuído para aproximar o texto do rodapé */
+    padding: 15px;
     text-align: center;
-    position: relative;
     width: 100%;
 }
 
@@ -124,19 +112,15 @@ footer {
     font-size: 1rem;
 }
 
+/* Tutorial Section */
 .tutorial {
-    padding: 15px; /* Diminuído para aproximar o conteúdo interno */
-    min-height: 100vh;
+    padding: 20px;
 }
 
-.tutorial h2,
-.tutorial h3 {
+.tutorial h2, .tutorial h3 {
     color: #181B18;
-    text-align: left;
-    padding: 5px; /* Diminuído para aproximar os títulos */
     margin-bottom: 5px;
     font-family: Roboto, sans-serif;
-    margin-left: 1rem;
 }
 
 .tutorial p {
@@ -144,7 +128,6 @@ footer {
     line-height: 1.5rem;
     text-align: justify;
     font-family: Rosarivo, serif;
-    padding: 0 1rem;
 }
 
 .box-tutorial {
@@ -153,15 +136,15 @@ footer {
     width: 90%;
     max-width: 500px;
     height: auto;
-    padding: 20px; /* Diminuído para aproximar o conteúdo interno */
-    margin: 15px auto; /* Diminuído para aproximar a box dos outros elementos */
+    padding: 20px;
+    margin: 15px auto;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 10px;
     }
 
     .menu {
@@ -169,14 +152,8 @@ footer {
         gap: 5px;
     }
 
-    .site-name {
-        font-size: 1.2rem;
-    }
-
     .Upload {
         width: 100%;
-        top: 0;
-        transform: none;
     }
 
     .envio-btn {
@@ -184,14 +161,13 @@ footer {
         padding: 6px 12px;
     }
 
-    .tutorial h2,
-    .tutorial h3 {
-        font-size: 1.2rem;
-        margin-left: 0.5rem;
+    .tutorial h2, .tutorial h3 {
+        font-size: 1.1rem;
     }
 
-    .tutorial p {
-        padding: 0 0.5rem;
+    .box-tutorial {
+        padding: 15px;
+        width: 95%;
     }
 }
 
@@ -206,8 +182,8 @@ footer {
     }
 
     .box-tutorial {
-        padding: 15px;
-        width: 95%;
+        padding: 10px;
+        width: 90%;
     }
 }
 
