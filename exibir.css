@@ -94,7 +94,7 @@ header {
 .skin-tone-container {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    transform: translate(0, 50%);
 }
 
 .skin-tone-table-scroll {
