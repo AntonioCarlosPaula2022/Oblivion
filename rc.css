@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #cab47c;
@@ -11,42 +12,50 @@ body {
     padding: 0;
     width: 100vw;
 }
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     background-color: #346038;
-    box-shadow: 0 2px 4px #653F26(127, 168, 50, 0.1);
+    box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
 }
+
 .menu {
     display: flex;
     gap: 0px;
-    margin-left: 1000px;
+    margin-left: 1000px; /* Ajuste no layout de menu para telas maiores */
 }
+
 .menu-item {
     text-decoration: none;
     color: #cab47c;
     font-weight: bold;
     transition: color 0.3s;
 }
+
 .menu-item:hover {
     color: #346038;
 }
-.name{
+
+.name {
     display: flex;
     gap: 0px;
 }
-.site-name{
+
+.site-name {
     text-decoration: none;
     color: #cab47c;
     font-weight: bold;
     font-size: 25px;
     transition: color 0.3s;
 }
-.site-name:hover{
+
+.site-name:hover {
     color: #346038;
 }
+
 .container {
     margin: 20px auto;
     width: 90%;
@@ -65,7 +74,6 @@ table {
     border-collapse: collapse;
     margin-top: 20px;
     margin: 20px auto;
-   
     border-radius: 20px;
 }
 
@@ -75,7 +83,6 @@ table th {
     color: white;
     padding: 12px;
     text-align: center;
-
 }
 
 /* Células de Dados */
@@ -85,14 +92,11 @@ table td {
     text-align: center;
 }
 
-
-
 /* Imagem nas células */
 img {
     max-width: 100px;
     height: auto;
 }
-
 
 footer {
     background-color: #343a40;
@@ -105,6 +109,7 @@ footer {
 footer p {
     margin: 5px 0;
 }
+
 footer {
     background-color: #346038;
     color: #cab47c;
@@ -112,14 +117,50 @@ footer {
     text-align: center;
     position: relative;
     bottom: 0;
-    top: 500px;
     width: 100%;
 }
-.footer-content p {
-    font-size: 24px;
-    margin-bottom: 0;
-}
+
 .footer-content p {
     font-size: 16px;
     margin-bottom: 0;
+}
+
+/* Media Queries para responsividade */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start; /* Alinha itens do cabeçalho à esquerda em telas menores */
+    }
+
+    .menu {
+        margin-left: 0; /* Remove o deslocamento para o menu em telas pequenas */
+        flex-direction: column; /* Alinha o menu em coluna */
+    }
+
+    .menu-item {
+        margin-right: 0; /* Remove a margem direita do menu em telas pequenas */
+        padding: 10px 0; /* Adiciona espaço entre os itens do menu */
+    }
+
+    table {
+        width: 90%; /* Aumenta a largura da tabela em telas menores */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Ajusta o tamanho do título em telas menores */
+    }
+
+    .footer-content p {
+        font-size: 14px; /* Ajusta o tamanho do texto no rodapé em telas menores */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .site-name {
+        font-size: 20px; /* Diminui o tamanho do texto do nome do site em telas muito pequenas */
+    }
+
+    table {
+        width: 100%; /* Faz a tabela ocupar toda a largura em telas muito pequenas */
+    }
 }
