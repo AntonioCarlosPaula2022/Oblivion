@@ -167,6 +167,29 @@ footer {
         padding: 10px; /* Ajusta o padding do rodapé em telas muito pequenas */
     }
 }
+/* Estilo dos Botões */
+.cart-button, .buy-now-button {
+    background-color: #007bff; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.cart-button:hover, .buy-now-button:hover {
+    background-color: #0056b3; /* Azul escuro ao passar o mouse */
+}
+
+/* Estilo específico do botão "Comprar" no cabeçalho */
+.buy-now-button {
+    padding: 10px 20px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
 
 
 
