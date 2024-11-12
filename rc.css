@@ -189,7 +189,22 @@ footer {
     margin-left: 20px;
     font-weight: bold;
 }
+.view-store-button {
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px; /* Espaço entre os botões */
+    transition: background-color 0.3s;
+    margin-right: 30px;
+}
 
+.view-store-button:hover {
+    background-color: #218838; /* Verde escuro ao passar o mouse */
+}
 
 
 
